@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!--
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
 
@@ -53,7 +53,7 @@
         }
         .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover { 
             color: #fff;
-        }
+        } 
     </style>
 
     <script type="text/javascript">
@@ -136,23 +136,25 @@
             <h1 class="page-title">查询条件</h1>
                 <table>
                 <tr>
-                <td>车牌</td><td><input type="text" value="" style="width:100px"  class="form-control"></td>
-                <td>车主</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                <td>电话</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
+                <td>车牌</td><td><input type="text" value="" style="width:150px"  class="form-control"></td>
+                <td>车主</td><td><input type="text" value="" style="width:200px" class="form-control"></td>
+                <td>车辆型号</td><td><input type="text" value="" style="width:200px" class="form-control"></td>
+                <td>电话</td><td><input type="text" value="" style="width:150px" class="form-control"></td>
                 </tr>
                 <tr>
-                <td>车辆品牌</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                <td>车辆型号</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                <td>发动机</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
+                <td>发动机</td><td><input type="text" value="" style="width:150px" class="form-control"></td>
+                <td>车架号</td><td><input type="text" value="" style="width:200px" class="form-control"></td>
+                <td>登记日期</td><td><input type="text" value="" style="width:150px" class="form-control"></td>
+                <td> 至 </td><td><input type="text" value="" style="width:150px" class="form-control"></td>
                 </tr>
                 <tr>
-                <td>车架号</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                <td>登记日期</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                <td>身份证</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
+                <td>车辆品牌</td><td><input type="text" value="" style="width:150px" class="form-control"></td>
+                <td>身份证</td><td><input type="text" value="" style="width:150px" class="form-control"></td>
+                <td>地址</td><td><input type="text" value="" style="width:200px" class="form-control"></td> 
                 </tr>
                 <tr>
-                <td>保险到期</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                <td>地址</td><td><input type="text" value="" style="width:100px" class="form-control"></td> 
+                <td>保险到期</td><td><input type="text" value="" style="width:150px" class="form-control"></td>
+                <td> 至 </td><td><input type="text" value="" style="width:150px" class="form-control"></td>
                 </tr>
                 <tr style="height:35px">
                   <td colspan="6" align="right" ><input type="button" value="查询" /></td>
@@ -165,71 +167,53 @@
         <div class="header"> 
             <li class="active">查询结果</li>
         </ul>
-<table class="table">
+
+<table class="table" style="overflow:scroll;">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-      <th style="width: 3.5em;"></th>
+      <th>序号</th>
+      <th style="max-width:100px;">车牌</th>
+      <th style="max-width:100px;">车主</th>
+      <th style="max-width:100px;">车辆型号</th>
+      <th style="max-width:100px;">电话</th>
+      <th style="max-width:100px;">发动机</th>
+      <th style="max-width:100px;">车架号</th>
+      <th style="max-width:100px;">登记日期</th>
+      <th style="max-width:100px;">车辆品牌</th>
+      <th style="max-width:100px;">身份证号</th>
+      <th style="max-width:100px;">保险到期</th>
+      <th style="max-width:100px;">地址</th> 
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>1</td>
-      <td>Mark</td>
-      <td>Tompson</td>
-      <td>the_mark7</td>
-      <td>
-         
-      </td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">苏AN331D</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">郭玥</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">CA5043XXYP40K2L1EA84-3</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">13851888197</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">01991983</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">LFNA4LBA7DAD83141</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">2014/1/4</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">一汽解放青岛汽车有限公司</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">320106198108073223</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">2014/1/4</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">地址一</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>Ashley</td>
-      <td>Jacobs</td>
-      <td>ash11927</td>
-      <td>
-          
-      </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Audrey</td>
-      <td>Ann</td>
-      <td>audann84</td>
-      <td>
-         
-      </td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>John</td>
-      <td>Robinson</td>
-      <td>jr5527</td>
-      <td>
-          
-      </td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Aaron</td>
-      <td>Butler</td>
-      <td>aaron_butler</td>
-      <td>
-          
-      </td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Chris</td>
-      <td>Albert</td>
-      <td>cab79</td>
-      <td>
-          
-      </td>
-    </tr>
+      <td style="max-width:100px;WORD-WRAP: break-word;">苏AN366D</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">郭玥</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">CA5043XXYP40K2L1EA84-3</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">13851888197</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">01991983</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">LFNA4LBA7DAD83141</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">2014/1/4</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">一汽解放青岛汽车有限公司</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">320106198108073223</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">2014/1/4</td>
+      <td style="max-width:100px;WORD-WRAP: break-word;">地址一</td>
+    </tr> 
   </tbody>
 </table>
 

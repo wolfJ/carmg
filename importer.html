@@ -133,111 +133,26 @@
   
     <div class="content">
         <div class="header">
-            <h1 class="page-title">查询条件</h1>
-                <table>
-                <tr>
-                <td>车牌</td><td><input type="text" value="" style="width:100px"  class="form-control"></td>
-                <td>车主</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                <td>电话</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                </tr>
-                <tr>
-                <td>车辆品牌</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                <td>车辆型号</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                <td>发动机</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                </tr>
-                <tr>
-                <td>车架号</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                <td>登记日期</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                <td>省份证</td><td><input type="text" value="" style="width:100px" class="form-control"></td>
-                </tr>
-                <tr style="height:35px">
-                  <td colspan="6" align="right" ><input type="button" value="查询" /></td>
-                </tr>
-                </table>
+            
+            <h1 class="page-title">数据导入</h1>
+                    <ul class="breadcrumb">
+            <li class="active">1.选择待导入的文件</li>
+            <li class="active">2.点击导入</li>
+            <li class="active">3.查看导入结果</li>
+        </ul>
 
         </div>
+         
         <div class="main-content">
-        
-        <div class="header"> 
-            <li class="active">查询结果</li>
-        </ul>
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-      <th style="width: 3.5em;"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>Tompson</td>
-      <td>the_mark7</td>
-      <td>
-         
-      </td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Ashley</td>
-      <td>Jacobs</td>
-      <td>ash11927</td>
-      <td>
-          
-      </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Audrey</td>
-      <td>Ann</td>
-      <td>audann84</td>
-      <td>
-         
-      </td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>John</td>
-      <td>Robinson</td>
-      <td>jr5527</td>
-      <td>
-          
-      </td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Aaron</td>
-      <td>Butler</td>
-      <td>aaron_butler</td>
-      <td>
-          
-      </td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Chris</td>
-      <td>Albert</td>
-      <td>cab79</td>
-      <td>
-          
-      </td>
-    </tr>
-  </tbody>
-</table>
+<form>
+ <p> 选择待导入的xls文件:<input type="file" name="file" id="file" value="选择xls文件" accept="xls" /></p>
+ <p>&nbsp;</p>
+<p><input type="button" value="导入" /></p>
+ <p>&nbsp;</p>
+<p>导入结果：</p>
+<p>导入文件“2014-11-19.xls”，共2093条记录，导入成功2093条记录，失败0条。</p>
+</form>
 
-<ul class="pagination">
-  <li><a href="#">&laquo;</a></li>
-  <li><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-  <li><a href="#">&raquo;</a></li>
-</ul>
 
 
 <div class="modal small fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

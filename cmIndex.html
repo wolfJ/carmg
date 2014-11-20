@@ -8,16 +8,29 @@
     <meta name="author" content="">
     <!--
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
 
     <script src="lib/jquery-1.11.1.min.js" type="text/javascript"></script>
-
-        <script src="lib/jQuery-Knob/js/jquery.knob.js" type="text/javascript"></script>
+    <script src="lib/jQuery-Knob/js/jquery.knob.js" type="text/javascript"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script language="javascript" src="javascripts/datepicker-zh.js"></script>
     <script type="text/javascript">
         $(function() {
             $(".knob").knob();
         });
+        $(function() {
+          $( "#datepickerS1" ).datepicker({
+            changeMonth: true,showButtonPanel: true});
+          $( "#datepickerE1" ).datepicker({
+            changeMonth: true,showButtonPanel: true});
+          $( "#datepickerS2" ).datepicker({
+            changeMonth: true,showButtonPanel: true});
+          $( "#datepickerE2" ).datepicker({
+            changeMonth: true,showButtonPanel: true});
+        });
+
     </script>
 
 
@@ -54,6 +67,10 @@
         .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover { 
             color: #fff;
         } 
+        tr.border_bottom td {
+          margin: 1px;
+          border-bottom:3pt solid white;
+        }
     </style>
 
     <script type="text/javascript">
@@ -135,29 +152,36 @@
         <div class="header">
             <h1 class="page-title">查询条件</h1>
                 <table>
-                <tr>
-                <td style="width:60px">车牌</td><td><input type="text" value="" style="width:180px"  class="form-control"></td>
-                <td style="width:60px">车主</td><td><input type="text" value="" style="width:200px" class="form-control"></td>
-                <td style="width:60px">电话</td><td><input type="text" value="" style="width:150px" class="form-control"></td>
+                <tr class="border_bottom">
+                <td style="width:60px;" align="right">车牌</td><td><input type="text" value="" style="width:180px"  class="form-control"></td>
+                <td style="width:60px" align="right">车主</td><td><input type="text" value="" style="width:200px" class="form-control"></td>
+                <td style="width:60px" align="right">电话</td><td><input type="text" value="" style="width:150px" class="form-control"></td>
                 </tr>
-                <tr>
-                <td style="width:60px">车辆品牌</td><td><input type="text" value="" style="width:180px" class="form-control"></td>
-                <td style="width:60px">车辆型号</td><td><input type="text" value="" style="width:200px" class="form-control"></td>
-                <td style="width:60px">身份证</td><td><input type="text" value="" style="width:150px" class="form-control"></td>
+                <tr class="border_bottom">
+                <td style="width:60px" align="right">车辆品牌</td><td><input type="text" value="" style="width:180px" class="form-control"></td>
+                <td style="width:60px" align="right">车辆型号</td><td><input type="text" value="" style="width:200px" class="form-control"></td>
+                <td style="width:60px" align="right">身份证</td><td><input type="text" value="" style="width:150px" class="form-control"></td>
                 </tr>
-                <tr>
-                <td style="width:60px">发动机</td><td><input type="text" value="" style="width:180px" class="form-control"></td>
-                <td style="width:60px">车架号</td><td><input type="text" value="" style="width:200px" class="form-control"></td>
-                <td style="width:60px">地址</td><td colspan="3"><input type="text" value="" style="width:250px" class="form-control"></td> 
+                <tr class="border_bottom">
+                <td style="width:60px" align="right">发动机</td><td><input type="text" value="" style="width:180px" class="form-control"></td>
+                <td style="width:60px" align="right">车架号</td><td><input type="text" value="" style="width:200px" class="form-control"></td>
+                <td style="width:60px" align="right">地址</td><td colspan="3"><input type="text" value="" style="width:250px" class="form-control"></td> 
                 </tr>
-                <tr>
-                <td>登记日期</td><td><input type="text" value="" style="width:180px" class="form-control"></td>
-                <td> 至 </td><td><input type="text" value="" style="width:150px" class="form-control"></td>
-                <td>保险到期</td><td><input type="text" value="" style="width:150px" class="form-control"></td>
-                <td> 至 </td><td><input type="text" value="" style="width:150px" class="form-control"></td>
+                <tr class="border_bottom">
+                <td align="right">登记日期</td><td colspan="3" >
+                  <table><tr><td><input type="text" value="" style="width:120px" class="form-control" id="datepickerS1"></td>
+                  <td>至</td>
+                  <td><input type="text" value="" style="width:120px" class="form-control" id="datepickerE1"></td></tr></table>
+                  </td>
+                <td align="right">保险到期</td><td colspan="3">
+                 <table><tr>
+                  <td><input type="text" value="" style="width:120px" class="form-control" id="datepickerS2"></td>
+                  <td>至</td>
+                  <td><input type="text" value="" style="width:120px" class="form-control" id="datepickerE2"></td> </tr></table>
+                 </td>
                 </tr>
                 <tr style="height:35px">
-                  <td colspan="6" align="right" ><input type="button" value="查询" /></td>
+                  <td colspan="6" align="right" ><input type="button" value="查询" class="btn btn-primary" style="width:80px" /></td>
                 </tr>
                 </table>
 
